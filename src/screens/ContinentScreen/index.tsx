@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client'
 import React from 'react'
 import { FlatList, Pressable, Text } from 'react-native'
 
-export const HomeScreen = () => {
+export const ContinentScreen = () => {
   const { data, loading } = useQuery(CONTINENT_QUERY)
 
   const ContinentItem = ({ continent }) => {

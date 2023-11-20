@@ -14,3 +14,12 @@ export const GET_CART_ITEMS = gql`
     cartItems @client
   }
 `
+
+export const GET_DOGS = gql`
+  query GetDogs {
+    dogs {
+      id
+      breed
+    }
+  }
+`

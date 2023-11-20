@@ -3,7 +3,7 @@ import { makeVar, useQuery } from '@apollo/client'
 import React from 'react'
 import { FlatList, Pressable, Text } from 'react-native'
 
-export const CartScreen = () => {
+export const DogScreen = () => {
   const { data, loading } = useQuery(GET_CART_ITEMS)
   const cartItemsVar = makeVar([])
 
