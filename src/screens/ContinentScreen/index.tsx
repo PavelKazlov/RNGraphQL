@@ -20,6 +20,7 @@ export const ContinentScreen = () => {
 
   return (
     <FlatList
+      initialNumToRender={20}
       data={data.continents}
       renderItem={({ item }) => <ContinentItem continent={item} />}
       keyExtractor={(item, index) => index}

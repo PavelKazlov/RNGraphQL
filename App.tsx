@@ -16,15 +16,20 @@ function App(): JSX.Element {
 
   // Initialize Apollo Client
   const client = new ApolloClient({
-    uri: 'https://countries.trevorblades.com/graphql',
-    // uri: 'https://71z1g.sse.codesandbox.io/',
+    //////////////////////////  Uncomment for different scenarios  /////////////////////////////
+    // uri: 'https://countries.trevorblades.com/graphql',
+    // uri: 'https://71z1g.sse.codesandbox.io/', // dogs
+    uri: 'https://sxewr.sse.codesandbox.io/', // Todos
     cache: new InMemoryCache(),
+    defaultOptions: {
+      watchQuery: { fetchPolicy: 'cache-only', nextFetchPolicy: 'cache-only' },
+    },
   })
 
   return (
     <ApolloProvider client={client}>
+      <StatusBar />
       <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar />
         <NavigationContainer>
           <StackNavigator />
         </NavigationContainer>

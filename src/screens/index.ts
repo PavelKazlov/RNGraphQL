@@ -1,3 +1,5 @@
 export * from './ContinentScreen'
 export * from './DogScreen'
+export * from './DogViewLazyScreen'
+export * from './DogViewScreen'
 export * from './HomeScreen'
